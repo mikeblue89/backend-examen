@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <center><h1>Constantes</h1></center>
+            <table class="table table-condensed table responsive">
+                <thead>
+                    <tr class="headColor">
+                        <th scope="col">Sitio</th>
+                        <th scope="col">URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat='sitio in vm.redes track by $index'>
+                        <td>{{sitio.name}}</td>
+                        <td>{{sitio.url}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <center><h1>Filtro</h1></center>
+            <select name="animalFilter" ng-model ="vm.filter">
+                <option value="" selected>Eliga una opcion</option>
+                <option value="dog">Perro</option>
+                <option value="cat">Gato</option>
+                <option value="spider">Arana</option>
+                <option value="male">Macho</option>
+                <option value="female">hembra</option>
+           </select>
+            <table class="table table-condensed table responsive">
+                <thead>
+                    <tr class="headColor">
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Genero</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat='animal in vm.animales track by $index'>
+                        <td>{{animal.name}}</td>
+                        <td>{{animal.type}}</td>
+                        <td>{{animal.sex}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
