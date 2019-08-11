@@ -6,9 +6,9 @@
         return (array, optionSelected)=>{
             let results = [];
             switch(optionSelected){
-                case "dog":{
+                case 'dog':{
                     array.forEach(element => {
-                        if(element.type == "dog") results.push(element);
+                        if(element.type == 'dog') results.push(element);
                     });
                     break;
                 }
