@@ -1,4 +1,4 @@
-let preferencesModule = angular.module('prefModule',['ui.bootstrap']);
+let preferencesModule = angular.module('prefModule',['parcialDos']);
 
 preferencesModule.provider('userPreferences',[function (){
     let $preferences = [];

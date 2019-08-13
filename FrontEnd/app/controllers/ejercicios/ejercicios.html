@@ -52,8 +52,24 @@
 
     <div class="row">
         <div class="col">
-            <center><h1>Preferences</h1></center>
-            
+            <center><h1>Preferencencias de usuario</h1></center>
+            <table class="table table-condensed table responsive">
+                <thead>
+                    <tr class="headColor">
+                        <th scope="col">Lenguaje</th>
+                        <th scope="col">Tema</th>
+                        <th scope="col">Estilo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat='preferencias in vm.pref'>
+                        <td>{{preferencias.language}}</td>
+                        <td>{{preferencias.theme}}</td>
+                        <td>{{preferencias.style}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {{vm.pref}}
         </div>
     </div>
 
