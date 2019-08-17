@@ -32,7 +32,7 @@
 
     moduleMain.config(config);
 
-    moduleMain.controller('ejerciciosController',['redes',function (redes){
+    moduleMain.controller('ejerciciosController',function (redes, userPreferences){
 
         let vm = this;
         vm.redes =redes;
@@ -42,7 +42,7 @@
             { name: "Lucas", type: "cat", sex: "male" },
             { name: "Peter", type: "spider", sex: "male" }
         ];
-    }],function(userPreferences){
+
         vm.pref = userPreferences.getData.get();
     });
 
